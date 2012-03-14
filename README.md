@@ -1,24 +1,49 @@
-# Imgareaselect::Rails
+# imgAreaSelect for Rails
 
-TODO: Write a gem description
+Places [imgAreaSelect](http://odyniec.net/projects/imgareaselect/) into the Rails asset pipeline.
+
+## Versioning
+
+This project uses [Semantic Versioning](http://semver.org/) and will attempt to account for the underlying imgAreaSelect JavaScript library versioning.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'imgareaselect-rails'
+    gem 'imgareaselect-rails', '~> 1.0'
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
+## Application Wide Usage
 
-    $ gem install imgareaselect-rails
+In your application.js:
 
-## Usage
+    //= require jquery.imgareaselect
 
-TODO: Write usage instructions here
+In your application.scss
+
+    @import 'imgareaselect-default'
+
+or
+
+    @import 'imgareaselect-animated'
+
+or
+
+    @import 'imgareaselect-deprecated'
+
+## Per Page Usage
+
+On the page you want to use it on include a stylesheet and the JavaScript:
+
+    <%= stylesheet_link_tag 'imgareaselect-default' %>
+    <%= javascript_include_tag 'jquery.imgareaselect' %>
+
+## Updating
+
+When new versions of imgAreaSelect are released the gem will be updated. If there's no update for the current version, contact me or contribute by updating the library and issuing a pull request.
 
 ## Contributing
 
