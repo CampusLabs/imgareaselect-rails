@@ -1093,9 +1093,6 @@ $.imgAreaSelect = function (img, options) {
     while ($p.length) {
         zIndex = max(zIndex,
             !isNaN($p.css('z-index')) ? $p.css('z-index') : zIndex);
-        /* Also check if any of the ancestor elements has fixed position */ 
-        if ($p.css('position') == 'fixed')
-            position = 'fixed';
 
         $p = $p.parent(':not(body)');
     }
